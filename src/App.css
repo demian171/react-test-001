@@ -7,7 +7,7 @@ img {
 }
 
 
-.main-wrapper {
+.app-wrapper {
   width: 1160px;
   margin: 0 auto;
   display: grid;
@@ -15,6 +15,6 @@ img {
   grid-template-rows: 1fr 200px;
 }
 
-.main-content {
+.app-content {
   padding: 20px 30px;
 }

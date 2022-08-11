@@ -1,14 +1,12 @@
-// import style from './MyPosts.module.css';
+import s from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 function MyPosts() {
     return (
-        <div className="">
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+        <div className={s.myPosts}>
+            <Post name='Alex' message='Alex some text message for You and somebody else' likes='5'/>
+            <Post  name='Nik' message='Nik, are You sure?'  likes='1'/>
+
         </div>
     );
 }

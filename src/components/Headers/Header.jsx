@@ -1,17 +1,16 @@
 import logo from '../../logo.svg';
-import style from './Header.module.css';
+import s from './Header.module.css';
+import {NavLink} from "react-router-dom";
 
 function Header() {
     return (
         <header className="">
-            <div className={style.headerWrapper} >
-                <img src={logo} alt="" className={style.logo}/>
-                <nav className={style.navbar}>
-                    <div className={style.item}>ссылка 1</div>
-                    <div className={style.item}>ссылка 2</div>
-                    <div className={style.item}>ссылка 3</div>
-                    <div className={style.item}>ссылка 4</div>
-                    <div className={style.item}>ссылка 5</div>
+            <div className={s.headerWrapper} >
+                <img src={logo} alt="" className={s.logo}/>
+                <nav className={s.navbar}>
+                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/main'>main</NavLink>
+                    <NavLink className={s.item} activeClassName={s.active} to='/profile'>profile</NavLink>
+                    <NavLink className={s.item} activeClassName={s.active} to='/dialogs'>dialogs</NavLink>
                 </nav>
             </div>
         </header>
