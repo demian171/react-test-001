@@ -11,14 +11,14 @@ import Dialogs from "./components/Dialogs/Dialogs"
 function App() {
     return (
         <BrowserRouter>
-            <div className="">
+            <div className="app">
                 <Header/>
                 <div className="app-wrapper">
                     <Sidebar/>
                     <div className="app-content">
                         <Routes>
-                            <Route path='/profile' element={<Profile/>}/>
-                            <Route path='/dialogs' element={<Dialogs/>}/>
+                            <Route path='/profile/*' element={<Profile/>}/>
+                            <Route path='/dialogs/*' element={<Dialogs/>}/>
                         </Routes>
                     </div>
                 </div>

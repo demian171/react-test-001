@@ -1,10 +1,11 @@
-// import style from "./Profile.module.css";
+import s from "./Profile.module.css";
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 function Profile() {
     return (
-        <div className="">
-            <img src="https://miro.medium.com/max/1400/1*TqyRspx_5HOOieltIIzImw.jpeg" alt="" className="profile-wall"/>
+        <div className={s.profile}>
+            <ProfileInfo/>
             <MyPosts/>
         </div>
     );

@@ -9,8 +9,8 @@ function Header() {
                 <img src={logo} alt="" className={s.logo}/>
                 <nav className={s.navbar}>
                     <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/main'>main</NavLink>
-                    <NavLink className={s.item} activeClassName={s.active} to='/profile'>profile</NavLink>
-                    <NavLink className={s.item} activeClassName={s.active} to='/dialogs'>dialogs</NavLink>
+                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/profile'>profile</NavLink>
+                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/dialogs'>dialogs</NavLink>
                 </nav>
             </div>
         </header>
