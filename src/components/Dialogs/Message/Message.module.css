@@ -1,0 +1,25 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.users, .personMessages {
+    padding: 20px;
+}
+
+.users {
+    font-weight: bold;
+}
+
+.person {
+    margin-bottom: 5px;
+}
+
+.personMessages {
+    border-left: 1px solid lightgrey;
+}
+
+
+.users .active {
+    color: gray;
+}

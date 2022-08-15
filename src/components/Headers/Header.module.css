@@ -24,9 +24,12 @@ header {
 
 .navbar a {
     color: white;
-    margin: 0 5px;
+    margin: 0 8px;
+    text-decoration: none;
+    font-size: 17px;
+    /*font-weight: bold;*/
 }
 
 a.active {
-    color: red;
+    color: #c9c9c9;
 }

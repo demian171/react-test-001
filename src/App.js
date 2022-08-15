@@ -8,7 +8,7 @@ import Sidebar from "./components/Sidebar/Sidebar"
 import Profile from "./components/Profile/Profile"
 import Dialogs from "./components/Dialogs/Dialogs"
 
-function App() {
+function App(props) {
     return (
         <BrowserRouter>
             <div className="app">
@@ -17,8 +17,8 @@ function App() {
                     <Sidebar/>
                     <div className="app-content">
                         <Routes>
-                            <Route path='/profile/*' element={<Profile/>}/>
-                            <Route path='/dialogs/*' element={<Dialogs/>}/>
+                            <Route path='/profile/*' element={<Profile state={props.state.profilePage}/>}/>
+                            <Route path='/dialogs/*' element={<Dialogs state={props.state.messagesPage}/>}/>
                         </Routes>
                     </div>
                 </div>
