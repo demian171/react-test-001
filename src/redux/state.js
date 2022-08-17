@@ -37,6 +37,7 @@ export let addPost = (postMessage) => {
         likes: 0
     }
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText='';
     renderMainTree(state);
 }
 
