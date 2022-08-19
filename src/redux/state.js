@@ -1,4 +1,6 @@
-import {renderMainTree} from "../render";
+let renderMainTree = () => {
+    console.log('renderMainTree');
+}
 
 let state = {
     profilePage: {
@@ -29,7 +31,7 @@ let state = {
     }
 }
 
-export let addPost = (postMessage) => {
+export const addPost = (postMessage) => {
     let newPost = {
         id: 15,
         name: '',
@@ -41,9 +43,13 @@ export let addPost = (postMessage) => {
     renderMainTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     renderMainTree(state);
+}
+
+export const subscribe = (observer) => {
+    renderMainTree = observer; //pattern observer (наблюдатель)
 }
 
 export default state;
