@@ -17,7 +17,7 @@ let initialSate = {
         {id: 4, message: 'my four message'},
         {id: 5, message: 'last message'}
     ],
-    newMessageText: 'newMessageText'
+    newMessageText: 'newMessageText1'
 };
 
 
