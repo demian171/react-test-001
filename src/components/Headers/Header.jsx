@@ -8,9 +8,9 @@ function Header() {
             <div className={s.headerWrapper} >
                 <img src={logo} alt="" className={s.logo}/>
                 <nav className={s.navbar}>
-                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/main'>main</NavLink>
-                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/profile'>profile</NavLink>
-                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/dialogs'>dialogs</NavLink>
+                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/'>Home</NavLink>
+                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/profile'>Profile</NavLink>
+                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/dialogs'>Dialogs</NavLink>
                 </nav>
             </div>
         </header>
