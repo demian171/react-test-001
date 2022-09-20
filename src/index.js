@@ -3,30 +3,37 @@
 // import {BrowserRouter} from "react-router-dom";
 // import './index.css';
 import reportWebVitals from './reportWebVitals';
-import state, {subscribe} from './redux/state';
+ // import store from './redux/store';
+import store from './redux/redux-store';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from "react-router-dom";
 import App from './App';
-import {addPost, updateNewPostText} from "./redux/state";
 
 //addPost('SelfTest')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export let renderMainTree = () => {
+export let renderMainTree = (state) => {
+
     root.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} addPost={addPost} updateNewPostText={updateNewPostText}/>
+                <App state={state}
+                     dispatch={store.dispatch.bind(store)}
+                />
             </BrowserRouter>
         </React.StrictMode>
     );
 
 }
 
-subscribe(renderMainTree);
+renderMainTree(store.getState());
+store.subscribe( () => {
+    let state = store.getState();
+    renderMainTree(state);
+} );
 
-renderMainTree(state);
+
 
 
 // If you want to start measuring performance in your app, pass a function

@@ -7,6 +7,7 @@ import Profile from "./components/Profile/Profile"
 import Dialogs from "./components/Dialogs/Dialogs"
 
 function App(props) {
+
     return (
         <div className="app">
             <Header/>
@@ -16,13 +17,13 @@ function App(props) {
                     <Routes>
                         <Route path='/profile/*'
                                element={<Profile profilePage={props.state.profilePage}
-                                                 addPost={props.addPost}
-                                                 newPostText={props.newPostText}
-                                                 updateNewPostText={props.updateNewPostText}
+                                                 dispatch={props.dispatch}
                                />
                                }/>
                         <Route path='/dialogs/*'
-                               element={<Dialogs state={props.state.messagesPage}/>}/>
+                               element={<Dialogs state={props.state.messagesPage}
+                                                 dispatch={props.dispatch}
+                               />}/>
                     </Routes>
                 </div>
             </div>
