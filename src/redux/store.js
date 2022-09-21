@@ -13,7 +13,7 @@ let store = {
             ],
             newPostText: 'test text'
         },
-        messagesPage: {
+        dialogsPage: {
             dialogs: [
                 {id: '1', name: 'Dima'},
                 {id: '2', name: 'Alex'},
@@ -44,7 +44,7 @@ let store = {
     },
     dispatch(action) { // Меняем _state и отрисовуем
         this._state.profilePage = profileReducer(this._state.profilePage, action);
-        this._state.messagesPage = dialogsReducer(this._state.messagesPage, action);
+        this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
         this._callSubscribe(this._state);
     }
 }

@@ -7,7 +7,7 @@ import Dialogs from "./Dialogs";
 
 const DialogsContainer = (props) => {
 // debugger
-    let state = props.store.getState().messagesPage;
+    let state = props.store.getState().dialogsPage;
 // debugger
     let onMessageChange = (text) => {
         // let text = newMessageElement.current.value;

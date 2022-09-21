@@ -8,7 +8,7 @@ import * as React from "react";
 
 const Dialogs = (props) => {
 
-    // let state = props.messagesPage
+    // let state = props.dialogsPage
 
     let dialogsElement = props.state.dialogs.map( s => <DialogItem name={s.name} id={s.id} /> )
     let messagesElement = props.state.messages.map( m => <Message message={m.message} id={m.id} /> )
