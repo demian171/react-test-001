@@ -9,6 +9,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter} from "react-router-dom";
 import App from './App';
+import StoreContext from "./StoreContext";
 
 //addPost('SelfTest')
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,10 +19,9 @@ export let renderMainTree = (state) => {
     root.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state}
-                     dispatch={store.dispatch.bind(store)}
-                     store={store}
-                />
+                <StoreContext.Provider value={store}>
+                <App/>
+                </StoreContext.Provider>
             </BrowserRouter>
         </React.StrictMode>
     );
