@@ -1,25 +1,12 @@
 import * as React from "react";
 import {addPostActionCreator, updateNewPostActionCreator} from "../../../redux/profile-reducer";
 import MyPosts from "./MyPosts";
-import StoreContext from "../../../StoreContext";
-
-
-const MyPostsContainer = () => {
-    // let state = props.store.getState();
+import {connect} from "react-redux";
+import {addMessageCreator, updateNewMessageCreator} from "../../../redux/dialogs-reducer";
+// import StoreContext from "../../../StoreContext";
 
 /*
-    let addPost = () => {
-        props.store.dispatch(addPostActionCreator());
-    }
-
-    let onPostChange = (text) => {
-        let action = updateNewPostActionCreator(text)
-        props.store.dispatch(action);
-        console.log(text);
-    }
-
- */
-
+const MyPostsContainer = () => {
     return (
         <StoreContext.Consumer>
             {
@@ -44,5 +31,27 @@ const MyPostsContainer = () => {
         </StoreContext.Consumer>
     );
 }
+*/
+
+let mapStateToProps = (state) => {
+    return {
+        posts: state.profilePage.posts,
+        newPostText: state.profilePage.newPostText
+    }
+}
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        addPost: () => {
+            dispatch(addPostActionCreator());
+        },
+        addMessageText: (text) => {
+            dispatch(updateNewPostActionCreator(text));
+        }
+    }
+}
+
+
+const MyPostsContainer = connect(mapStateToProps,mapDispatchToProps)(MyPosts);
 
 export default MyPostsContainer;
