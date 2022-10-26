@@ -1,9 +1,8 @@
-import * as React from "react";
 import {addMessageCreator, updateNewMessageCreator} from "../../redux/dialogs-reducer";
 import Dialogs from "./Dialogs";
 //import StoreContext from "../../StoreContext";
 import {connect} from "react-redux";
-
+// import * as React from "react";
 /*
 const DialogsContainer = () => {
     return <StoreContext.Consumer>

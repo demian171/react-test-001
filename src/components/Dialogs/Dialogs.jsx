@@ -8,10 +8,8 @@ import * as React from "react";
 
 const Dialogs = (props) => {
 
-    // let state = props.dialogsPage
-
-    let dialogsElement = props.state.dialogs.map( s => <DialogItem name={s.name} id={s.id} /> )
-    let messagesElement = props.state.messages.map( m => <Message message={m.message} id={m.id} /> )
+    let dialogsElement = props.dialogsPage.dialogs.map( s => <DialogItem name={s.name} id={s.id} /> )
+    let messagesElement = props.dialogsPage.messages.map( m => <Message message={m.message} id={m.id} /> )
     // debugger
     let newMessageElement = React.createRef();
 
@@ -37,7 +35,7 @@ const Dialogs = (props) => {
 
         <div>
             <div>
-                <textarea ref={newMessageElement} onChange={onMessageChange} value={props.state.newMessageText} cols="50" rows="10"> </textarea>
+                <textarea ref={newMessageElement} onChange={onMessageChange} value={props.dialogsPage.newMessageText} cols="50" rows="10"> </textarea>
             </div>
             <div>
                 <button  onClick={addMessage}> Add new post
