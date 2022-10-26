@@ -9,6 +9,7 @@ function Header() {
                 <img src={logo} alt="" className={s.logo}/>
                 <nav className={s.navbar}>
                     <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/'>Home</NavLink>
+                    <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/users'>Users</NavLink>
                     <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/profile'>Profile</NavLink>
                     <NavLink className = { navData => navData.isActive ? s.active : s.item } to='/dialogs'>Dialogs</NavLink>
                 </nav>

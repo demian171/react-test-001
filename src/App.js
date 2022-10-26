@@ -7,6 +7,7 @@ import Profile from "./components/Profile/Profile"
 // import Dialogs from "./components/Dialogs/Dialogs"
 import Home from "./components/Home/Home";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import Users from "./components/Users/Users";
 
 function App(props) {
     // debugger
@@ -21,6 +22,7 @@ function App(props) {
 
                         <Route path='/profile/*' element={<Profile /> }/>
                         <Route path='/dialogs/*' element={<DialogsContainer />}/>
+                        <Route path='/users/*' element={<Users />}/>
                     </Routes>
                 </div>
             </div>
