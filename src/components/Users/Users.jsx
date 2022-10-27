@@ -1,6 +1,6 @@
 import s from "./Users.module.css";
 
-function Users(props) {
+let Users = (props) => {
     return (
         <div className={s.home}>
             <h1 className={s.title}>Users page</h1>
