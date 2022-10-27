@@ -6,23 +6,25 @@ import { Provider } from 'react-redux'
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+        <BrowserRouter>
+            <Provider store={store}>
+                <App/>
+            </Provider>
+        </BrowserRouter>
+    </React.StrictMode>
+);
+
+
 
 export let renderMainTree = () => {
 
-    root.render(
-        <React.StrictMode>
-            <BrowserRouter>
-                <Provider store={store}>
-                    <App/>
-                </Provider>
-            </BrowserRouter>
-        </React.StrictMode>
-    );
-
 }
 
-renderMainTree();
+// renderMainTree();
+/*
 store.subscribe( () => {
     renderMainTree();
 } );
-
+*/
