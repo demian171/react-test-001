@@ -6,4 +6,46 @@
     font-size: 28px;
 }
 
+.usersList {
+
+}
+
+.user {
+    display: flex;
+    margin-bottom: 30px;
+
+    border: 1px solid gray;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.avatarBlock {
+    margin-right: 10px;
+}
+
+.avatar img {
+    width: 90px;
+    margin-bottom: 10px;
+}
+
+button {
+    color: white;
+    border: none;
+    height: 30px;
+    width: 100%;
+}
+
+.followed {
+    background: #c43434;
+}
+
+.unfollowed {
+
+    background: #189318;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
 

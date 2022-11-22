@@ -4,10 +4,9 @@ import './App.css';
 import Header from './components/Headers/Header';
 import Sidebar from "./components/Sidebar/Sidebar"
 import Profile from "./components/Profile/Profile"
-// import Dialogs from "./components/Dialogs/Dialogs"
 import Home from "./components/Home/Home";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import Users from "./components/Users/Users";
+import UsersContainer from "./components/Users/UsersContainer";
 
 function App(props) {
     // debugger
@@ -22,7 +21,7 @@ function App(props) {
 
                         <Route path='/profile/*' element={<Profile /> }/>
                         <Route path='/dialogs/*' element={<DialogsContainer />}/>
-                        <Route path='/users/*' element={<Users />}/>
+                        <Route path='/users/*' element={<UsersContainer />}/>
                     </Routes>
                 </div>
             </div>
